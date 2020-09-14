@@ -1,0 +1,85 @@
+// Video 3, minuto 20:08 https://youtu.be/fiuWVbnBIpo?t=1208
+
+instalar linha de comando do expo
+npm install -g expo-cli
+
+para iniciar um novo projeto
+expo init picpay
+
+selecionei o template blank que é o mais cru possível para configurar.
+
+para entrar e rodar o projeto
+cd picpay
+yarn start  
+
+vai abrir o expo devstools no navegador.
+
+se for ios precisa abrir no safari a url que fica em abaixo de coonection no lado esquerdo do navegador
+
+o pc e o celular precisam estar na mesma rede.
+
+instalar o react-natigation
+yarn add @react-navigation/native
+com expo
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+yarn add @react-navigation/bottom-tabs
+
+
+import 'react-native-gesture-handler' ;  //esse import tem que ser antes de tudo, segundo a doc.
+
+
+Assim como o <Tab.Navigator><Tab.Screen /></Tab.Navigator> é o helper pra nossas Tab
+o <NavigationContainer /> é componente para os tipos de navegação da nossa aplicação, 
+eles precisam está envolvidos por ele
+
+Para atualizar no celular precisei
+1) Clicar em lan
+2) Fechar aba
+3) Clear no app
+
+Quando tem {{}} é array, ou seja precisar ser : invés de =
+Exemplo no options={{title:"Pagar"}}
+
+Para importar os ícones, o expo tem um lib que já faz isso pra nós.
+import { AntDesign, Ionicons } from '@expo/vector-icons'
+dai a gente precisa selecionar a lib em questão e o nome do icone na lib
+
+
+Dentro do Tab.Navigator tem um propriedade chamada "screenOptions" é uma 
+função do  que tu percorrer as propriedades do Tab.Screen e essa function
+retorna um objeto
+
+O estilo é feito no react native com os component utilizando camelCase.
+Exemplo: Invés de background-color
+backgroundColor
+
+
+uma forma para estilizar componentes
+yarn add styled-components
+para deixar os componentes com o estilo gradiente
+expo install expo-linear-gradient
+
+
+tem que importar com /native diferente do react.js
+import styled from 'styled-components/native'
+
+com o styled-components podemos voltar a estilizar como no css, ao invés
+de camelCase
+
+Para não ter nenhum efeito quando alguem clicar no botão é importado a 
+propriedade nativa, um botão sem feedback
+import { TouchableWithoutFeedback } from 'react-native';
+
+
+Aonde a gente desestrutura route, nós temos um propriedade chamada "navigation"
+e dentro dela temos um função chamada navigate que faz a mudança de tela quando ela
+não está fazendo normalmente.
+
+
+
+
+Referências:
+Expo Vector Icons: https://expo.github.io/vector-icons
+Repositório no GitHub: https://github.com/maateusilva/picpay-clone
+Me siga no Instagram: https://www.instagram.com/imateus.silva
